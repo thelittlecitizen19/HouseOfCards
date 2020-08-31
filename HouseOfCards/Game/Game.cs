@@ -19,6 +19,7 @@ namespace HouseOfCards.Game
             Players = players;
             RemainHints = 5;
             RemainMistakes = 4;
+            InitMiddleCards();
 
 
         }
@@ -43,11 +44,17 @@ namespace HouseOfCards.Game
         }
         public bool AcceptPlay(Card card)
         {
-            
+            if (IsPlayLegal(card))
+            {
+                MiddleCards[card.Type].Push(card);
+                return true;
+            }
+            return false;
+
         }
         private bool IsPlayLegal(Card card)
         {
-
+            return MiddleCards[card.Type].Peek().Number + 1 == card.Number;
         }
     }
 }
