@@ -4,13 +4,13 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace HouseOfCards.Menu
+namespace HouseOfCards.Menus
 {
-    public class Menu
+    public class PlayerMenu
     {
         private IDisplay _displayer;
         public Dictionary<string, Action> Operations { get; set; }
-        public Menu(IDisplay displayer)
+        public PlayerMenu(IDisplay displayer)
         {
             Operations = new Dictionary<string, Action>();
             _displayer = displayer;
