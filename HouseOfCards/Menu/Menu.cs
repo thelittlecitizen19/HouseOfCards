@@ -21,6 +21,7 @@ namespace HouseOfCards.Menu
             Operations.Clear();
             Operations.Add("1", player.PlayCard);
             Operations.Add("2", player.GetHint);
+            Operations.Add("3", player.ThrowCard);
         }
         public void DisplayMenu()
         {
