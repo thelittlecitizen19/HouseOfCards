@@ -37,6 +37,12 @@ namespace HouseOfCards.Players
             OnGetHint?.Invoke();
         }
 
+        public void ThrowCard()
+        {
+            OnThrowCard?.Invoke();
+
+        }
+
         private int ChooseCardFromHand()
         {
             foreach (KeyValuePair<int,GameCard> kvp in CardsInHand)
