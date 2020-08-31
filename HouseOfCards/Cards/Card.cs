@@ -15,5 +15,10 @@ namespace HouseOfCards.Cards
             Type = cardType;
             Number = number;
         }
+
+        public override string ToString()
+        {
+            return $"# {Number} {Type}";
+        }
     }
 }
